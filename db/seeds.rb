@@ -17,10 +17,36 @@ product4 = Product.create(name: "Ballpoint Pens", price: 2)
 product5 = Product.create(name: "Scotch Tape", price: 3)
 
 puts "Creating reviews..."
-# *****************************************************************
-# * TODO: create reviews! Remember, a review belongs to a product *
-# * and a review belongs to an user.                              *
-# *****************************************************************
-# Create Reviews Here
-
+review1 = Review.create(
+    star_rating: Faker::Number.between(from: 1, to: 5),
+    comment: Faker::Lorem.sentence,
+    product_id: product1.id,
+    user_id: user1.id
+  )
+  
+  review2 = Review.create(
+    star_rating: Faker::Number.between(from: 1, to: 5),
+    comment: Faker::Lorem.sentence,
+    product_id: product2.id,
+    user_id: user2.id
+  )
+  
+  review3 = Review.create(
+    star_rating: Faker::Number.between(from: 1, to: 5),
+    comment: Faker::Lorem.sentence,
+    product_id: product3.id,
+    user_id: user3.id
+  )
+  review4 = Review.create(
+    star_rating: Faker::Number.between(from: 1, to: 5),
+    comment: Faker::Lorem.sentence,
+    product_id: product4.id,
+    user_id: user1.id
+  )
+  review5 = Review.create(
+    star_rating: Faker::Number.between(from: 1, to: 5),
+    comment: Faker::Lorem.sentence,
+    product_id: product5.id,
+    user_id: user2.id
+  )
 puts "Seeding done!"

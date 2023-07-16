@@ -16,6 +16,10 @@ gem "rake"
 # https://github.com/sparklemotion/sqlite3-ruby
 gem "sqlite3", "~> 1.4"
 
+# Used to generate seed data
+# https://github.com/faker-ruby/faker
+gem "faker", "~> 2.18"
+
 # Require all files in a folder
 # https://github.com/jarmo/require_all
 gem "require_all"
