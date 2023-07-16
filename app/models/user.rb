@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
     if product.is_a?(Product) && products.include?(product)
       reviews.where(product_id: product.id).destroy_all
     else
-      puts "You have not reviewed this product."
+      pp "You have not reviewed this product."
     end
   end  
 end

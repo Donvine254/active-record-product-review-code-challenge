@@ -10,16 +10,16 @@ class Product < ActiveRecord::Base
 
   def print_all_reviews
     if reviews.empty?
-        puts "no reviews available for #{name}"
+        pp "no reviews available for #{name}"
     end
     reviews.map do |review|
-      puts "Review for #{name} by #{review.user.name}: #{review.star_rating}. #{review.comment}"
+      pp "Review for #{name} by #{review.user.name}: #{review.star_rating}. #{review.comment}"
     end
   end
 
   def average_rating
     if reviews.empty?
-        puts "this product has not been reviewed yet"
+        pp "this product has not been reviewed yet"
     end
     reviews.average(:star_rating).to_f
   end
